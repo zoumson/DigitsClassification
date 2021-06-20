@@ -170,7 +170,7 @@ Usage: demo [params]
 	-s, --save (value:./result/eyeGlassClassifierModel.yml)
 		save train file name
 ```
-3. Run for matrix usage 
+2. Run for the MNIST image 
  ```sh
    ./bin/demo -i=./resource/image/digits.png
 ```
