@@ -13,7 +13,7 @@
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
 ## Digits Classification model trainning 
-
+![mn](https://user-images.githubusercontent.com/38358621/122679991-beb0a980-d21f-11eb-958e-bd029d98fb0e.png)
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
