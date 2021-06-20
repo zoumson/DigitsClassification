@@ -87,13 +87,26 @@ It is a widely used and deeply understood dataset and, for the most part, is “
 .
 ├── CMakeLists.txt
 ├── include
+│   ├── ConstantsSVM.h
+│   ├── Hog.h
+│   ├── Preprocess.h
+│   └── SVM.h
 ├── README.md
-├── ressource
-│   └── happy.jpeg
+├── resource
+│   └── image
+│       └── digits.png
 └── src
-    └── imageBasics.cpp
+    ├── demo
+    │   ├── CMakeLists.txt
+    │   └── demo.cpp
+    └── lib
+        ├── CMakeLists.txt
+        └── modelSVM
+            ├── Hog.cpp
+            ├── Preprocess.cpp
+            └── SVM.cpp
 
-
+7 directories, 13 files
 
 ```
 
@@ -136,7 +149,7 @@ git clone https://github.com/zoumson/OpencvInstall.git     \
    ```
 3. Create empty directories 
    ```sh
-   mkdir build &&  mkdir bin && mkdir result 
+   mkdir build &&  mkdir bin && mkdir result && mkdir lib
    ```
 5. Generate the exectutable and move it to `bin`
    ```sh
@@ -145,18 +158,38 @@ git clone https://github.com/zoumson/OpencvInstall.git     \
 
 <!-- USAGE EXAMPLES -->
 ### Usage
-1. Run for matrix usage 
-   ```sh
-   ./bin/imageBasics ./ressource/happy.jpeg
-   ```
-2. Output
-   ```sh
+1. Command line arguments
+```sh
+Digits Classification
+Usage: demo [params] 
 
-   ```
-
-4. Back to the initial file structure configuration
+	-?, -h, --help, --usage (value:true)
+		show help message
+	-i, --image (value:<none>)
+		image path
+	-s, --save (value:./result/eyeGlassClassifierModel.yml)
+		save train file name
+```
+3. Run for matrix usage 
+ ```sh
+   ./bin/demo -i=./resource/image/digits.png
+```
+3. Output
+```sh
+Image Count : 5000
+Descriptor Size : 144
+Kernel type     : 2
+Type            : 100
+C               : 12.5
+Degree          : 0
+Nu              : 0
+Gamma           : 0.5
+the accuracy is :98.4
+```
+4. Model saved at result folder as `eyeGlassClassifierModel.yml`, name could be set at command line
+5. Back to the initial file structure configuration
    ```sh
-   rm -r bin build result 
+   rm -r bin build result lib 
    ```
 <!-- ROADMAP -->
 ## Roadmap
