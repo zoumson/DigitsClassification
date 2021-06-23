@@ -68,7 +68,6 @@ It is a widely used and deeply understood dataset and, for the most part, is “
 
 * [opencv](https://opencv.org/)
 * [cmake](https://cmake.org/)
-* [conan](https://conan.io/)
 
 <br>
 
@@ -124,10 +123,6 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   sudo apt-get install cmake
   ```
-* conan 
-```sh
-sudo pip install conan
-```
 
  * opencv4
  ```sh
