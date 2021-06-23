@@ -1,11 +1,19 @@
-#Bring the sources
-file(GLOB SOURCES_MODEL_SVM ${PROJECT_SOURCE_DIR}/src/lib/modelSVM/*.cpp)
 
-#Generate library
-add_library(modelSVM SHARED ${SOURCES_MODEL_SVM})
+MACRO(make_lib name)
+    #Bring the sources
+    FILE(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/lib/${name}/*.cpp)
 
-#Add other libraries used to build the main library
-target_link_libraries(modelSVM PRIVATE ${OpenCV_LIBS})
+    #Generate library
+    ADD_LIBRARY(${name} SHARED ${SOURCES})
 
-#Set an installation path, type "sudo make install" to apply
-install(TARGETS modelSVM DESTINATION /usr/lib)
+    #Add other libraries used to build the main library
+    TARGET_LINK_LIBRARIES(${name} PRIVATE ${OpenCV_LIBS})
+
+    #Set an installation path, type "sudo make install" to apply
+    INSTALL(TARGETS ${name} DESTINATION /usr/lib)
+ENDMACRO()
+
+make_lib(modelSVM)
+
+
+

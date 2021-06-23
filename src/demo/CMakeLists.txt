@@ -1,3 +1,5 @@
+#Custom lib
+set(Custom_LIBS modelSVM)
 #Bring the sources
 file(GLOB SOURCES_DEMO ${PROJECT_SOURCE_DIR}/src/demo/*.cpp)
 
@@ -5,4 +7,4 @@ file(GLOB SOURCES_DEMO ${PROJECT_SOURCE_DIR}/src/demo/*.cpp)
 add_executable(demo ${SOURCES_DEMO})
 
 #Link the libraries 
-target_link_libraries(demo modelSVM ${OpenCV_LIBS})
+target_link_libraries(demo ${Custom_LIBS} ${OpenCV_LIBS})
