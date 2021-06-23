@@ -12,7 +12,7 @@
 [![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
-## Digits Classification model trainning 
+## Digits Classification Model Trainning 
 ![mn](https://user-images.githubusercontent.com/38358621/122679991-beb0a980-d21f-11eb-958e-bd029d98fb0e.png)
 <!-- TABLE OF CONTENTS -->
 <details open="open">
